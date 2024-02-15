@@ -1,0 +1,143 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+$input-border-radius: 100px;
+
+/** Grid system - https://www.w3schools.com/css/css_rwd_grid.asp **/
+* {
+  box-sizing: border-box;
+}
+
+//changed background color and text color
+body {
+  background-color: color(display-p3 0.157 0.157 0.192);
+  color: white;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  body {
+    max-width: 100%;
+  }
+}
+
+// Changed for less spacing
+[class*="col-"] {
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/** Image - https://www.w3schools.com/css/css_rwd_grid.asp **/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/** Overflow (for tables) - https://www.w3schools.com/howto/howto_css_table_responsive.asp **/
+.overflow {
+  overflow-x: auto;
+}
+
+//aligned the title to the center
+h1 {
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+//rounded the buttons and made them consistent length
+.custom-select {
+  width: 15em;
+  border-radius: 100em;
+}
+
+.form-control {
+  width: 15em;
+  border-radius: 100em;
+}
+
+//set radius width equal to the buttons
+#rating {
+  width: 13em;
+}
+
+//submit styles:
+#submit {
+  width: 7em;
+  height: 3em;
+  border-radius: 100em;
+  text-align: center;
+  border: none;
+  background-color: lightcoral;
+}
+
+
+//Table Styles:
+#display {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#display td, #display th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#display tr:nth-child(even){background-color: #f2f2f2;}
+
+#display tr:hover {background-color: #ddd;}
+
+#display th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}

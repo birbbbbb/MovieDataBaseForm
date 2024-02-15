@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <h1>Movie Database</h1>
+
+    <div id="invalid-form" class="alert alert-danger">&nbsp;</div>
+    <div id="valid-form" class="alert alert-success">&nbsp;</div>
+
+    <hr />
+
+    <div class="row">
+      <div class="col-2">
+        <label for="title">Movie Title:</label>
+      </div>
+      <div class="col-10">
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          autocomplete="NULL"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="title-error" class="col-12 text-danger">&nbsp;</div>
+      <!-- Error message will be displayed here -->
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <label for="genre">Movie Genre:</label>
+      </div>
+
+      <!-- Custom bootstrap select (it looks better) -->
+      <div class="col-10">
+        <select id="genre" class="custom-select">
+          <option selected>Choose...</option>
+          <option value="action">Action/Adventure</option>
+          <option value="horror">Horror</option>
+          <option value="comedy">Comedy</option>
+          <option value="romance">Romance</option>
+          <option value="sifi">Si-Fi</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="genre-error" class="col-12 text-danger">&nbsp;</div>
+      <!-- Error message will be displayed here -->
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <label for="rating">Rate the Movie:</label>
+      </div>
+      <div class="col-10">
+        <input type="range" id="rating" , name="rating" min="0" , max="5" />
+        <span style="padding-left: 0.5em" id="demo"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="rating-error" class="col-12 text-danger">&nbsp;</div>
+      <!-- Error message will be displayed here -->
+    </div>
+
+    <!-- New Section -->
+
+    <div class="row">
+      <div class="col-2">
+        <label for="date">Release Date:</label>
+      </div>
+
+      <div class="col-10">
+        <input type="date" id="date" name="date" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="date-error" class="col-12 text-danger">&nbsp;</div>
+      <!-- Error message will be displayed here -->
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <label for="runtime">Runtime (in minutes):</label>
+      </div>
+
+      <div class="col-10">
+        <input type="number" id="runtime" name="runtime" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="runtime-error" class="col-12 text-danger">&nbsp;</div>
+      <!-- Error message will be displayed here -->
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <label for="director">Director:</label>
+      </div>
+      <div class="col-10">
+        <input type="text" id="director" name="director" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="director-error" class="col-12 text-danger">&nbsp;</div>
+      <!-- Error message will be displayed here -->
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <label for="actors">Actors:</label>
+      </div>
+      <div class="col-10">
+        <input type="text" id="actors" name="actors" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="actors-error" class="col-12 text-danger">&nbsp;</div>
+      <!-- Error message will be displayed here -->
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <label for="summary">Summary:</label>
+      </div>
+      <div class="col-10">
+        <textarea id="summary" name="summary" rows="4" cols="50"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="summary-error" class="col-12 text-danger">&nbsp;</div>
+      <!-- Error message will be displayed here -->
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <label for="trailer">Trailer Link:</label>
+      </div>
+
+      <div class="col-10">
+        <input type="text" id="trailer" name="trailer" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="trailer-error" class="col-12 text-danger">&nbsp;</div>
+      <!-- Error message will be displayed here -->
+    </div>
+
+    <!-- End of New Section -->
+
+    <div class="row">
+      <div class="col-2">
+        <label for="poster">Movie Poster:</label>
+      </div>
+      <div class="col-10">
+        <input
+          type="file"
+          class="form-control"
+          class="rounded-4"
+          id="poster"
+          name="poster"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="poster-error" class="col-12 text-danger">&nbsp;</div>
+      <!-- Error message will be displayed here -->
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <label for="video">Movie Video File:</label>
+      </div>
+      <div class="col-10">
+        <input type="file" class="form-control" id="video" name="video" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="video-error" class="col-12 text-danger">&nbsp;</div>
+      <!-- Error message will be displayed here -->
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <button id="submit">Submit</button>
+      </div>
+    </div>
+
+    <hr />
+
+    <div id="display"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/validation.js"></script>
+  </body>
+</html>
