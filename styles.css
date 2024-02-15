@@ -113,7 +113,6 @@ h1 {
   background-color: lightcoral;
 }
 
-
 /* Table Styles: */
 #display {
   font-family: Arial, Helvetica, sans-serif;
@@ -121,19 +120,24 @@ h1 {
   width: 100%;
 }
 
-#display td, #display th {
+#display td,
+#display th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#display tr:nth-child(even){background-color: #f2f2f2;}
+#display tr:nth-child(even) {
+  background-color: color(display-p3 0.103 0.112 0.162);
+}
 
-#display tr:hover {background-color: #ddd;}
+#display tr:hover {
+  background-color: black;
+}
 
 #display th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
 }
